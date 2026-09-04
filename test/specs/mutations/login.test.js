@@ -14,7 +14,7 @@ describe('teste gerais', () => {
                 variables: {
                     email: "admin@admin.com",
                     senha: "123456"
-                }
+                } 
             })
             expect(response.status).to.eq(200);
             expect(response.body.data.login.token).not.be.empty;
