@@ -28,3 +28,6 @@ jobs:
 
           - name: AGUARDAR A API INICIAR
             run: sleep 10
+
+          - name: EXECUTAR OS TESTES
+            run: npm test
