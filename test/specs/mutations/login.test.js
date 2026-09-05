@@ -1,10 +1,10 @@
 const request = require('supertest')
 const { expect } = require('chai')
 
-describe('teste gerais', () => {
+describe.only('teste gerais', () => {
     it('deve realizar login com credenciais validas', async () => {
        const response = await request('http://localhost:4000/graphql')
-            .post('/graphql')
+            .post('')
             .send({
                 query: `mutation Login($email: String!, $senha: String!) {
                         login(email: $email, senha: $senha) {
