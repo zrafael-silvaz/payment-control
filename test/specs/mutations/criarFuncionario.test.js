@@ -1,7 +1,7 @@
 const request = require('supertest')
 const { expect } = require('chai')
 
-describe.only('Criar funcionarios', () => {
+describe('Criar funcionarios', () => {
 
     let cpf = Date.now()
     let nome = "teste funcionanrio"
@@ -13,7 +13,7 @@ describe.only('Criar funcionarios', () => {
 
     before(async ()=>{
         token = await request('http://localhost:4000/graphql')
-            .post('/graphql')
+            .post('')
             .send({
                 query: `mutation Login($email: String!, $senha: String!) {
                         login(email: $email, senha: $senha) {
